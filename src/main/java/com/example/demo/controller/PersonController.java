@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.document.Person;
+import com.example.demo.document.PersonDocument;
 import com.example.demo.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,12 +16,12 @@ public class PersonController {
     }
 
     @PostMapping
-    public void save(@RequestBody final Person person) {
-        service.save(person);
+    public void save(@RequestBody final PersonDocument personDocument) {
+        service.save(personDocument);
     }
 
     @GetMapping("/{id}")
-    public Person findById(@PathVariable final String id) {
+    public PersonDocument findById(@PathVariable final String id) {
         return service.findById(id);
     }
 }

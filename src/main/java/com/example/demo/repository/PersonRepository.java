@@ -1,7 +1,7 @@
 package com.example.demo.repository;
 
-import com.example.demo.document.Person;
-import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
+import com.example.demo.entity.Person;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PersonRepository extends ElasticsearchRepository<Person, String> {
+public interface PersonRepository extends JpaRepository<Person, String> {
 }

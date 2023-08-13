@@ -11,7 +11,7 @@ import org.springframework.data.elasticsearch.annotations.Setting;
 @Data
 @Document(indexName = Indices.PERSON_INDEX)
 @Setting(settingPath = "static/es-settings.json")
-public class Person {
+public class PersonDocument {
 
     @Id
     @Field(type= FieldType.Keyword)
